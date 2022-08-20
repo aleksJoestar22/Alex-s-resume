@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&family=Playfair+Display:ital,wght@1,700&family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --primary:#a30eb0;
+    --second:#16b32b;
+    --hr:#d16f19;
+    --text:  #f0dcea;
+}
+
+html{
+    font-size: 10px;
+
+}
+
+body{
+    background-color: #0f010b;
+    color: white;
+    font-family: Poppins, sans-serif;
+}
+/*Generales*/
+img{
+    width: 100%;
+}
+a{
+    text-decoration: none;
+    color: rgb(255, 123, 253);
+    font-size: 1.2rem;
+}
+hr{
+    border: 1px solid var(--hr);
+    border-radius: 5px;
+}
+
+.container{
+    background: #07070707;
+    display: grid;
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 90%;
+    padding: 3rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.description{
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    font-weight: 200;
+    color: var(--text);
+}
+.title{
+    margin-top: 1rem;
+    color: var(--second);
+    font-weight: 500;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+@media only screen and (max-width: 768px) {
+    .container{
+        width: 100%;
+        grid-template-columns: 1fr;
+        padding: 3rem;
+        gap: 5rem;
+    }
+}
+@media only screen and (max-width:768px){
+    .profile-container{
+        flex-direction: column;
+    }
+}
+.profile{
+    grid-column: 1/ -1;
+    margin-bottom: 1rem;
+}
+.profile-container{
+    display:flex;
+}
+
+.profile-image{
+    max-width: 250px;
+}
+.profile-title{
+    color: var(--second);
+    font-weight: 200;
+    text-transform: uppercase;
+    padding-left: 2rem;
+    font-size: clamp(1.5rem,1.5rem,3rem);    
+}
+.profile-name{
+    color: var(--primary);
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: clamp(2.5rem,3.5rem,7rem);
+}
+.profile-contact{
+    padding: 0 4rem;
+}
+
+.group-1, .group-2{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-left: 2rem;
+}
